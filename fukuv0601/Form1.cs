@@ -2,7 +2,7 @@ namespace fukuv0601
 {
     public partial class Form1 : Form
     {
-        int vx;
+        int vx = 10;
 
         public Form1()
         {
