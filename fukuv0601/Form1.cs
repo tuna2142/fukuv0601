@@ -26,13 +26,13 @@ namespace fukuv0601
             label1.Top += vy;
 
             if (label1.Left <= 0)
-                vx = 10;
-            if (label1.Left >= 760)
-                vx = -10;
+                vx = Math.Abs(vx + (vx / 10));
+            if (label1.Right >= ClientSize.Width)
+                vx = -Math.Abs(vx + (vx / 10));
             if (label1.Top <= 0)
-                vy = 10;
-            if (label1.Top >= 440)
-                vy = -10;
+                vy = Math.Abs(vy + (vy / 10));
+            if (label1.Bottom >= ClientSize.Height)
+                vy = -Math.Abs(vy + (vy / 10));
         }
 
         private void label1_Click(object sender, EventArgs e)
